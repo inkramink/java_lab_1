@@ -8,7 +8,7 @@ public class Container {
     /**
      * The inner Node class represents a node in the list.
      */
-    class Node {
+    static class Node {
         Object obj;
         Node next;
 
@@ -52,7 +52,7 @@ public class Container {
      */
     public Object get_value(int place) {
         Node helper = head;
-        for (int i = 0; i < place-1; i++) {
+        for (int i = 0; i < place - 1; i++) {
             helper = helper.next;
         }
         return helper.obj;
@@ -141,7 +141,7 @@ public class Container {
             helper.next = new Node(value);
         } else {
             helper = head;
-            for (int i = 0; i < place-1; i++) {
+            for (int i = 0; i < place - 1; i++) {
                 helper = helper.next;
             }
             Node new_elem = new Node(value);
@@ -176,7 +176,7 @@ public class Container {
             helper.next = null;
         } else {
             Node helper = head;
-            for (int i = 0; i < place-2; i++) {
+            for (int i = 0; i < place - 2; i++) {
                 helper = helper.next;
             }
             helper.next = helper.next.next;
